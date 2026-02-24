@@ -1,0 +1,14 @@
+<html xmlns:th = "http://www.thymeleaf.org"> 
+	<head> 
+		<title>Thymeleaf Demo</title>
+	</head>
+	<body>
+		<h1>This is Course Detail page</h1>
+	
+		<div th:object = ${st}>
+			<p>Id: <strong th:text=*{id}></strong></p>
+			<p>Name: <strong th:text=*{name}></strong></p>
+			<p>Course: <strong th:text=*{course}></strong></p>
+		</div>
+	</body>
+</html>
