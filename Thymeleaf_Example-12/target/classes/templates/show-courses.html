@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Courses</title>
+</head>
+<body>
+	<h1>Course List</h1>
+	<ul>
+		<li th:each="course, status : ${courses}"><span
+			th:text="${status.count}"></span> 
+			<span th:text="${course}"></span>
+		</li>
+	</ul>
+</body>
+</html>

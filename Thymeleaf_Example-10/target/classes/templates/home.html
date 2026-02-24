@@ -1,0 +1,11 @@
+<html xmlns:th = "http://www.thymeleaf.org"> 
+	<head> 
+		<title>Home page</title>
+	</head>
+	<body>
+	
+		<div th:replace="~{header::webHeader}"></div>
+		<h1><i style="color:white; background-color:green">This is my main section</i></h1>
+		<div th:insert="~{footer::webFooter}"></div>
+	</body>
+</html>
