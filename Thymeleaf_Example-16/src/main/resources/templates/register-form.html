@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Registration Page</title>
+  </head>
+  <body>
+    <div align="center">
+	<div style="border-style:solid;width:500px">
+	   <h1>Student Registration</h1>
+	   <form th:action="@{/save}" th:object="${studentForm}">
+	      Enter Name:<br>
+	      <input type="text" th:field="*{name}" ><br><br>
+	      Enter Gender:<br>
+	      <input type="radio" th:field="*{gender}" value="Male">Male
+	      <input type="radio" th:field="*{gender}" value="Female">Female<br><br>
+	      Enter Course:<br>
+	      <input type="text" th:field="*{course}"><br><br>
+	      <button type="submit">Register Me</button> 
+	</form>
+	</div>
+    </div>
+</body>
+</html>

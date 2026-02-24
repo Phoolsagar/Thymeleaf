@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Thymeleaf Demo</title>
+</head>
+<body>
+	<h1>Students List</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Course</th>
+				<th>Advice</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="student : ${students}">
+				<td th:text="${student.id}"></td>
+				<td th:text="${student.name}"></td>
+				<td th:text="${student.course}"></td>
+				<td th:if="${student.course =='Java'}">Learn Spring boot</td>
+				<td th:unless="${student.course =='Java'}">Learn Framework</td>
+
+				
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

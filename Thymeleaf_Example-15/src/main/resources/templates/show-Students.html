@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Thymeleaf Demo</title>
+</head>
+<body>
+	<h1>Students List</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Course</th>
+				<th>Advice</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="student : ${students}">
+				<td th:text="${student.id}"></td>
+				<td th:text="${student.name}"></td>
+				<td th:text="${student.course}"></td>
+				<div th:switch="${student.course}">
+					<td th:case="'Java'">Learn Spring boot</td>
+					<td th:case="'JavaScript'">Learn React</td>
+					<td th:case="'Python'">Learn Django</td>
+					<td th:case="*">Learn FullStack</td>
+				</div>
+
+
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
